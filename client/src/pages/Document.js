@@ -40,12 +40,12 @@ const Document = () => {
         >
           <AttributesGrid
             attributes={[{
+              name: 'name',
+              label: t('Common.labels.name')
+            }, {
               name: 'id',
               label: t('Common.labels.id'),
               renderValue: () => t('Document.labels.id', { id: item.id })
-            }, {
-              name: 'name',
-              label: t('Document.labels.name')
             }, {
               name: 'created_at',
               label: t('Common.labels.created'),
@@ -127,7 +127,8 @@ const Document = () => {
                 label: t('Document.labels.bindingColor'),
                 qualification: {
                   object: 'Document',
-                  group: 'Binding Color'
+                  group: 'Color',
+                  formField: 'binding_color'
                 }
               }, {
                 name: 'number_sewing_supports',

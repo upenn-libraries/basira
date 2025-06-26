@@ -18,7 +18,7 @@ BASIRA is **B**ooks **a**s **S**ymbols **i**n **R**enaissance **A**rt. This READ
 Clone the repository
 ```bash
 $ mkdir basira
-$ git clone https://github.com/performant-software/basira basira
+$ git clone https://github.com/upenn-libraries/basira basira
 $ cd basira
 ```
 
