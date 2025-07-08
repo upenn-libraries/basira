@@ -86,3 +86,4 @@ To update an existing search index:
 ```bash
 $ bundle exec rake typesense:index
 ```
+
