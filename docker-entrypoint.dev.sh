@@ -7,5 +7,6 @@ if [ -f /app/tmp/pids/server.pid ]; then
 fi
 
 bundle exec rake db:migrate:with_data 2>/dev/null || bundle exec rake db:setup
+RAILS_ENV=test bundle exec rails db:prepare
 
 exec bundle exec "$@"
