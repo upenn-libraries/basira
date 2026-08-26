@@ -187,6 +187,7 @@ GEM
     mini_portile2 (2.8.9)
     minitest (5.27.0)
     msgpack (1.8.4)
+    mutex_m (0.3.0)
     net-http-persistent (4.0.2)
       connection_pool (~> 2.2)
     net-imap (0.6.6)
@@ -338,6 +339,7 @@ DEPENDENCIES
   factory_bot_rails
   image_processing (~> 1.0)
   listen (~> 3.2)
+  mutex_m
   pg
   pry-rails
   puma (~> 6.1)
@@ -351,7 +353,7 @@ DEPENDENCIES
   tzinfo-data
 
 RUBY VERSION
-   ruby 3.3.12p206
+   ruby 3.4.10p104
 
 BUNDLED WITH
-   2.2.33
+   2.6.9

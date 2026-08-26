@@ -56,7 +56,15 @@ $ yarn --cwd client start -p <port>
 **Note**: When running the client in `development` mode, all requests will automatically be proxied to `http://localhost:3001` unless a `REACT_APP_API_URL` environment variable is provided. This defined in `/client/package.json` under the `proxy` property.
 
 ## Docker
-The application can also be started in a Docker container:
+The application can also be started in a Docker container.
+
+Copy `.env.example` to `.env.docker.dev`. The copied file should work as is. If not, make any changes needed for you environment.
+
+```bash
+cp .env.example .env.docker.dev
+```
+
+Bring up the docker environment:
 
 ```bash
 $ docker compose -f docker-compose.dev.yml --env-file .env.docker.dev up --build
