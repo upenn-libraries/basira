@@ -35,7 +35,7 @@ class Actions extends NestedAttributes {
         formData.append(`${prefix}[${collection}][${index}][${key}]`, String.toString(item[key]));
       });
 
-      Qualifications.appendFormData(formData, `[${prefix}][${collection}][${index}]`, item);
+      Qualifications.appendFormData(formData, `${prefix}[${collection}][${index}]`, item);
     });
   }
 }

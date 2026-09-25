@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.2.2'
+ruby '3.4.10'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.0.4'
+gem 'rails', '~> 7.2.3.2'
 
 # Use PostgreSQL as the database for Active Record
 gem 'pg'
@@ -37,7 +37,7 @@ gem 'aws-sdk-s3'
 gem 'image_processing', '~> 1.0'
 
 # Data migration
-gem 'data_migrate', '~> 9.0'
+gem 'data_migrate', '~> 11.0'
 
 # Typesense for search indexing
 gem 'typesense', '~> 0.14'
@@ -52,6 +52,13 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.1.0'
+  gem 'mutex_m'
+end
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
