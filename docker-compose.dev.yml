@@ -27,6 +27,7 @@ services:
     entrypoint: /app/docker-entrypoint.dev.sh
     ports:
       - "3001:3001"
+      - "3000:3000" # published here because web shares this network namespace
     volumes:
       - ./:/app
     working_dir: /app
@@ -39,8 +40,8 @@ services:
     depends_on:
       - api
     env_file: .env.docker.dev
-    ports:
-      - "3000:3000"
+    # Share api's network so the CRA proxy ("localhost:3001") reaches Rails
+    network_mode: "service:api"
     stdin_open: true
     volumes:
       - ./:/client

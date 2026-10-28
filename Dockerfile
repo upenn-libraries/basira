@@ -1,5 +1,5 @@
 # Use the Ruby 3.4.10 image from Docker Hub as the base image (https://hub.docker.com/_/ruby)
-FROM ruby:3.4.10
+FROM ruby:3.4.12
 
 RUN apt-get update -qq && apt-get install -y postgresql-client git libvips npm
 RUN npm install --global yarn
